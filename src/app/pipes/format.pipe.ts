@@ -16,7 +16,7 @@ export class FormatPipe implements PipeTransform {
       arrLetter = value.replace(/\D/g, '').split('').reverse();
 
       if (!arrLetter.length) {
-        return '0';
+        return '';
       }
 
     } else {
