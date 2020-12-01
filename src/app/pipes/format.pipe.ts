@@ -13,11 +13,13 @@ export class FormatPipe implements PipeTransform {
       arrLetter = Math.floor(value).toString().split('').reverse();
 
     } else if (typeof value === 'string') {
-      arrLetter = value.replace(/\D/g, '').split('').reverse();
+      const stringNumber = value.replace(/\D/g, '');
 
-      if (!arrLetter.length) {
-        return '';
+      if (isNaN(+stringNumber)) {
+        throw new Error('Invalid value');
       }
+
+      arrLetter = stringNumber.split('').reverse();
 
     } else {
       throw Error('Invalid value');
