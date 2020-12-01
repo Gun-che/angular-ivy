@@ -1,0 +1,9 @@
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+form {
+  border: 1px solid grey;
+  padding: 15px;
+}

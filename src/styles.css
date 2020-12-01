@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+form {
+  border: 1px solid grey;
+  padding: 15px;
+}
+button {
+  margin: 15px;
+}
+label {
+  margin: 15px;
+}

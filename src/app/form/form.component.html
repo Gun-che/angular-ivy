@@ -1,0 +1,20 @@
+<form (ngSubmit)="onSubmit(name.value, price.value)" [formGroup]="productControl" >
+  Name: <input formControlName="name"
+               placeholder="name"
+               #name>
+  Price: <input
+    formControlName="price"
+    placeholder="price"
+    #price>
+  <button type="submit">
+    Add
+  </button>
+</form>
+
+<div class="list">
+  <h4>Product list</h4>
+  <div class="item" *ngFor="let product of products; let i = index">
+    <span>{{i + 1}}. Name: {{product.name}}</span>
+    <span>Price: {{product.price}}</span>
+  </div>
+</div>
